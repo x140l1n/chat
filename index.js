@@ -28,6 +28,7 @@ io.on("connection", (socket) =>
     socket.broadcast.emit("received-message", data);
   });
 
+  //Not working
   socket.on("disconnect", () => 
   {    
     socket.broadcast.emit("user-disconnected", users[socket.id]);
