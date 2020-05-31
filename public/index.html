@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/notify.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="content">
+        <form id="form" action="chat.html">
+            <div id="noti"></div>
+            <div id="form-container">
+                <h1 id="form-header">Chat test</h1>
+                <br/>
+                <input class="form-text" id="nickname" name="nickname" type="text" placeholder="Nickname"/>
+                <br/>
+                <button type="button" class="button-success" id="button-go">Go</button>
+            </div>
+        </form>
+    </div>
+<script src="/socket.io/socket.io.js"></script>
+<script type="module" src="js/client.js"></script>
+<script type="module" src="js/notify.js"></script>
+</body>
+</html>
