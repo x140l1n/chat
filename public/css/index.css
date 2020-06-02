@@ -147,4 +147,27 @@
     cursor: pointer;
 }
 
+#chat-content
+{
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.self-message
+{
+    color: white;
+    background-color: green;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px;
+    float: right;
+}
+
+.wrap-message
+{
+    display: inline-block;
+    width: 100%;
+}
+
 

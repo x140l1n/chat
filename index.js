@@ -7,7 +7,19 @@ const port = 3000;
 
 const users = {};
 
+app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
+
+app.get("/", function(req, res)
+{
+  res.render("index");
+});
+
+app.get("/chat", function(req, res)
+{
+  res.render("chat");
+});
+
 
 server.listen(port, function () {
   console.log(`Listening on port ${port}!`);
@@ -28,9 +40,10 @@ io.on("connection", (socket) =>
     socket.broadcast.emit("received-message", data);
   });
 
-  //Not working
   socket.on("disconnect", () => 
   {    
+    console.log(users[socket.id]);
+
     socket.broadcast.emit("user-disconnected", users[socket.id]);
     delete users[socket.id];
   });

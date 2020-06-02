@@ -49,10 +49,14 @@ document.addEventListener("DOMContentLoaded", function()
     }
 });
 
-function append_message(data)
+function append_message(data, self_message)
 {
     var content = document.getElementById("chat-content");
 
-    content.innerHTML += `<div class="message">${data}</div>`
+    if(self_message)
+        content.innerHTML += `<div class="wrap-message"><div class="message">${data}</div></div>`;
+    else
+        content.innerHTML += `<div class="wrap-message"><div class="self-message">${data}</div></div>`;
 }
+
 
